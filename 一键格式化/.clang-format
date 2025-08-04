@@ -1,0 +1,26 @@
+# 基础配置：基于LLVM风格扩展（可根据需求调整）
+BasedOnStyle: LLVM
+
+# 缩进宽度：4个空格（核心参数）
+IndentWidth: 4
+
+# 不使用Tab键，强制用空格代替（核心参数）
+UseTab: Never
+
+# Tab的视觉宽度（配合UseTab: Never时，用于对齐场景，通常与IndentWidth一致）
+TabWidth: 4
+
+# 以下为可选补充配置（根据C/C++代码风格调整）
+# 语句块缩进（如if/for内的代码）
+ContinuationIndentWidth: 4
+# 括号与内容的缩进（如函数参数换行时）
+ColumnLimit: 0  # 关闭行宽限制，避免自动换行干扰缩进
+
+
+# 关键：开启自定义大括号换行模式（必须添加）
+BreakBeforeBraces: Custom
+
+# 自定义大括号换行规则（此时才会生效）
+BraceWrapping:
+  AfterFunction: true      # 函数大括号单独换行
+  AfterControlStatement: true  # if/for/while 等控制语句大括号单独换行
